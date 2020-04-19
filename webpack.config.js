@@ -5,6 +5,20 @@ module.exports = {
   // 'entry' should be 1 file
   entry: './src/index.js',
   mode: 'development',
-
-  // We could specify 'output', but default of 'src/main.js' is fine with me!
+  module: {
+    rules: [
+      {
+        // Is it a JPEG file? This could be updated for other images/files, of course.
+        test: /\.jpeg$/, // RegEx for file ending in 'JPEG.'
+        use: [
+          {
+            loader: 'url-loader',
+          },
+          // {
+          //   loader: 'imagemin-webpack-plugin',
+          // },
+        ],
+      },
+    ],
+  },
 };
