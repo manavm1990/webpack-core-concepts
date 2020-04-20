@@ -1,6 +1,8 @@
 // Since version 4.0.0, webpack does not require a configuration file to bundle your project.
 // https://webpack.js.org/concepts/
 
+const Uglify = require('uglifyjs-webpack-plugin');
+
 module.exports = {
   // 'entry' should be 1 file
   entry: './src/index.js',
@@ -46,4 +48,13 @@ module.exports = {
       },
     ],
   },
+  optimization: {
+    minimizer: [
+      new Uglify({
+        test: /\.js(\?.*)?$/i,
+      }),
+    ],
+  },
+  // Add this in 'plugins' also for it to work (https://stackoverflow.com/questions/53465730/webpack-4-uglifyjs-not-minifying-and-compressing)
+  plugins: [new Uglify()],
 };
