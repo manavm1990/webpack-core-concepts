@@ -7,3 +7,12 @@ As some students pointed out in the comments section, this course is for a previ
 So, kindly consider this is as a **supplement** to the course itself in case you care to see a _slightly_ more updated implementation.
 
 Thanks to [Mr. Sean Larkin](@TheLarkInn) for taking the time to create this **free** course.
+
+## Things I Added
+
+1. I used [this](https://www.npmjs.com/package/image-webpack-loader) is an example to 'upgrade' the robustness of our image optimization.
+
+## Things I Omitted
+
+1. I didn't bother with `output` - default was fine.
+2. I didn't bother with writing ✍️ a plugin. [This](https://webpack.js.org/contribute/writing-a-plugin/) provides enuff documentation - NS that I would really need to do this, especially being newer to webpack.
